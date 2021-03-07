@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Covid</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="date.js"></script>
+</head>
+<body>
+    <div class="fondo"></div>
+    <div class="container">
+        <h1>APP COVID ANDALUCIA</h1> 
+        <h2>Consulta los datos por provincia en tiempo real. Datos obtenidos de Consejería Salud y Familias Junta
+            Andalucía mediante Api. </h2>
+    </div>
+    <div class="main_container">
+        <div class="chart-container" style="position: relative; height:50%; min-width:50%">
+            <canvas id="myChart"></canvas>
+            <span id="info"></span>
+            <br><br>
+            <span id="nombreProvincia"></span>
+        </div>
+        <div class="main_container_info">
+            <h3>Tu consulta:</h3>
+            <div id="cuadro">
+
+                <h3>Provinciaaas</h3>
+                <select id="andalucia">
+                    <option value="malaga">Málaga</option>
+                    <option value="sevilla">Sevilla</option>
+                    <option value="cordoba">Córdoba</option>
+                    <option value="almeria">Almería</option>
+                    <option value="huelva">Huelva</option>
+                    <option value="granada">Granada</option>
+                    <option value="cadiz">Cádiz</option>
+                    <option value="jaen">Jaén</option>
+                </select>
+                <!-- <input type="button" value="Muestra datos" id="mostrarDastos"
+                    onclick="newData(); /* this.disabled=true */"> -->
+                <input type="date" id="start" name="trip-start" min="2020-01-01" max="2021-12-31">
+                <input type="button" id="busca" value='Busca'>
+            </div>
+        </div>
+    </div>
+   
+    <br><br>
+    <!-- importo la libreria moments -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
+    <!-- importo todos los idiomas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment-with-locales.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
